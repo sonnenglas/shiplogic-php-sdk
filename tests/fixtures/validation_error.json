@@ -1,0 +1,6 @@
+{
+  "message": "Validation failed",
+  "errors": [
+    {"field": "collection_address.street_address", "message": "must not be empty"}
+  ]
+}

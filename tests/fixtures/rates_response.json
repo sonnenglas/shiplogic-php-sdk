@@ -1,0 +1,26 @@
+{
+  "rates": [
+    {
+      "rate": 92.5,
+      "service_level": {
+        "id": 23365,
+        "code": "ECO",
+        "name": "Economy",
+        "collection_date": "2025-06-18T06:30:00Z",
+        "delivery_date_from": "2025-06-19T07:30:00Z",
+        "delivery_date_to": "2025-06-20T09:30:00Z"
+      }
+    },
+    {
+      "rate": 215.0,
+      "service_level": {
+        "id": 23380,
+        "code": "OVN",
+        "name": "Overnight",
+        "collection_date": "2025-06-18T06:30:00Z",
+        "delivery_date_from": "2025-06-19T07:30:00Z",
+        "delivery_date_to": "2025-06-19T17:00:00Z"
+      }
+    }
+  ]
+}

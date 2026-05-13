@@ -1,0 +1,28 @@
+{
+  "id": 108649,
+  "short_tracking_reference": "3BM3",
+  "custom_tracking_reference": "SLX3BM3",
+  "status": "submitted",
+  "service_level_code": "ECO",
+  "service_level_name": "Economy",
+  "rate": 20.5,
+  "time_created": "2025-06-17T12:36:12.747767Z",
+  "collection_address": {
+    "city": "Pretoria",
+    "country": "South Africa"
+  },
+  "delivery_address": {
+    "city": "Cape Town",
+    "country": "South Africa"
+  },
+  "parcels": [
+    {
+      "id": 181100,
+      "submitted_length_cm": 40,
+      "submitted_width_cm": 30,
+      "submitted_height_cm": 5,
+      "submitted_weight_kg": 2,
+      "tracking_reference": "SLX3BM3/1"
+    }
+  ]
+}
