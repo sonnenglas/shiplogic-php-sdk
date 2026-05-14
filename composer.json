@@ -1,6 +1,6 @@
 {
   "name": "sonnenglas/shiplogic-sdk",
-  "description": "Unofficial PHP SDK for the Shiplogic REST API (powers The Courier Guy and other ZA carrier brands)",
+  "description": "Unofficial PHP SDK for the Shiplogic REST API — the shipping platform behind The Courier Guy and other South African carrier brands. Covers rate quotes, shipments, label PDFs, cancellation, tracking and webhook payloads.",
   "keywords": ["shiplogic", "courier-guy", "thecourierguy", "shipping", "api", "rest", "client", "php", "south-africa"],
   "type": "library",
   "license": "MIT",

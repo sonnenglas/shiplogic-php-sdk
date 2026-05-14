@@ -1,6 +1,8 @@
 # Shiplogic PHP SDK
 
-Unofficial PHP SDK for the [Shiplogic](https://shiplogic.com) REST API, which powers The Courier Guy and other South African carrier brands.
+Unofficial PHP SDK for the [Shiplogic](https://shiplogic.com) shipping platform — the API behind **The Courier Guy** and other South African carrier brands.
+
+Covers rate quotes, shipment CRUD, label and sticker PDF downloads, cancellation, tracking events, and inbound webhook payloads (`tracking-event`, `shipment-note`, `parcel-dimension-changes`, `shipment-address-changes`). Hand-crafted, dependency-light (Guzzle only), with first-class value objects and response DTOs.
 
 ## Requirements
 
