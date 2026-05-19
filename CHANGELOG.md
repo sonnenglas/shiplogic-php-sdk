@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.0.0 - 2026-05-19
+
+First stable release. Verified end-to-end against the live Shiplogic sandbox API (rates, shipment creation, label download, tracking, cancellation).
+
+- Bearer-token authenticated client for the Shiplogic REST API (`api.shiplogic.com`); the sandbox/production environment is determined by the API token.
+- `ShipmentService`: shipment creation, retrieval, label and sticker PDF downloads, cancellation.
+- `RatesService`: rate quotes.
+- `TrackingService`: tracking lookups.
+- Webhook payload DTOs for tracking events, shipment notes, parcel dimension changes, and address changes.
+
+### Pre-release history
+
 ## 0.1.1 - 2026-05-19
 
 - Fix `Client::URI_SANDBOX`: Shiplogic exposes a single API host (`api.shiplogic.com`) for both sandbox and production; the environment is determined by the API token, not the URL. `sandbox.shiplogic.com` is the web client portal and was returning HTML instead of API responses.
