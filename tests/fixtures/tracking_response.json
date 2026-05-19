@@ -1,24 +1,40 @@
 {
-  "status": "at-hub",
-  "short_tracking_reference": "S7GL",
-  "custom_tracking_reference": "SLXS7GL",
-  "tracking_events": [
+  "shipments": [
     {
-      "id": 418146,
-      "date": "2025-06-17T12:23:30.493767Z",
+      "provider_id": 10,
+      "shipment_id": 113451645,
+      "customer_reference": "ORDER-123",
+      "short_tracking_reference": "S7GL",
+      "parcel_tracking_references": ["S7GL/1"],
       "status": "at-hub",
-      "message": "At PTA hub",
-      "location": "PTA",
-      "source": "mariskaadmin",
-      "parcel_id": 0
-    },
-    {
-      "id": 418141,
-      "date": "2025-06-17T12:22:32.632101Z",
-      "status": "collected",
-      "message": "",
-      "source": "corneldriver",
-      "parcel_id": 0
+      "service_level_code": "ECO",
+      "service_level_name": "Economy",
+      "parcel_count": 1,
+      "tracking_events": [
+        {
+          "id": 418146,
+          "date": "2025-06-17T12:23:30.493767Z",
+          "status": "at-hub",
+          "message": "At PTA hub",
+          "location": "PTA",
+          "source": "mariskaadmin",
+          "parcel_id": 0
+        },
+        {
+          "id": 418141,
+          "date": "2025-06-17T12:22:32.632101Z",
+          "status": "collected",
+          "message": "",
+          "source": "corneldriver",
+          "parcel_id": 0
+        }
+      ]
     }
+  ],
+  "tracking_steps": [
+    { "step_number": 1, "label": "created", "progress": "complete" },
+    { "step_number": 2, "label": "collected", "progress": "current" },
+    { "step_number": 3, "label": "in-transit", "progress": "pending" },
+    { "step_number": 4, "label": "delivered", "progress": "pending" }
   ]
 }

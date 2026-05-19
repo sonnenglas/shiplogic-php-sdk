@@ -27,7 +27,10 @@ use Sonnenglas\Shiplogic\ValueObjects\ShipmentRequest;
 use Sonnenglas\Shiplogic\Enums\ServiceLevel;
 use Sonnenglas\Shiplogic\Enums\AddressType;
 
-$shiplogic = new Shiplogic(apiToken: '...', productionMode: false);
+// Shiplogic uses a single API host (api.shiplogic.com); sandbox vs production
+// is decided by the API token, not the URL. `productionMode` is kept for
+// backwards compatibility but no longer changes the base URI.
+$shiplogic = new Shiplogic(apiToken: '...');
 $shipmentService = $shiplogic->getShipmentService();
 
 $sender = new Address(

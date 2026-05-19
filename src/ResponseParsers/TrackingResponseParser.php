@@ -14,9 +14,11 @@ class TrackingResponseParser
      */
     public function parse(array $payload): TrackingResponse
     {
+        $shipment = $this->extractShipment($payload);
+
         $events = [];
 
-        $rawEvents = $payload['tracking_events'] ?? [];
+        $rawEvents = $shipment['tracking_events'] ?? [];
 
         if (is_array($rawEvents)) {
             foreach ($rawEvents as $event) {
@@ -38,11 +40,30 @@ class TrackingResponseParser
         }
 
         return new TrackingResponse(
-            status: (string) ($payload['status'] ?? ''),
-            shortTrackingReference: (string) ($payload['short_tracking_reference'] ?? ''),
-            customTrackingReference: (string) ($payload['custom_tracking_reference'] ?? ''),
+            status: (string) ($shipment['status'] ?? ''),
+            shortTrackingReference: (string) ($shipment['short_tracking_reference'] ?? ''),
+            customTrackingReference: (string) ($shipment['custom_tracking_reference'] ?? ''),
             trackingEvents: $events,
             raw: $payload,
         );
+    }
+
+    /**
+     * The `GET /tracking/shipments` endpoint wraps the shipment in a
+     * `shipments` array (alongside `tracking_steps`). Fall back to the
+     * payload itself for the flat shape used by tracking-event webhooks.
+     *
+     * @param  array<string, mixed>  $payload
+     * @return array<string, mixed>
+     */
+    protected function extractShipment(array $payload): array
+    {
+        if (isset($payload['shipments']) && is_array($payload['shipments']) && count($payload['shipments']) > 0) {
+            $first = reset($payload['shipments']);
+
+            return is_array($first) ? $first : [];
+        }
+
+        return $payload;
     }
 }
