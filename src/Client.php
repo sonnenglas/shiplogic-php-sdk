@@ -18,7 +18,12 @@ class Client
 {
     public const URI_PRODUCTION = 'https://api.shiplogic.com/';
 
-    public const URI_SANDBOX = 'https://sandbox.shiplogic.com/';
+    /**
+     * Shiplogic exposes a single API host for both sandbox and production.
+     * The environment is determined by the API token / account, not the URL
+     * (https://sandbox.shiplogic.com is the web client portal, not an API).
+     */
+    public const URI_SANDBOX = 'https://api.shiplogic.com/';
 
     protected string $baseUri;
 
