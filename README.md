@@ -13,7 +13,7 @@ Covers rate quotes, shipment CRUD, label and sticker PDF downloads, cancellation
 ## Installation
 
 ```bash
-composer require sonnenglas/shiplogic-sdk
+composer require sonnenglas/shiplogic-php-sdk
 ```
 
 ## Usage
