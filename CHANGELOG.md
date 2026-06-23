@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 - 2026-06-23
+
+- Package author metadata, README credits, and LICENSE copyright now list
+  Przemek Peron (`przemek@sonnenglas.net`).
+
 ## 1.0.0 - 2026-05-19
 
 First stable release. Verified end-to-end against the live Shiplogic sandbox API (rates, shipment creation, label download, tracking, cancellation).

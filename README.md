@@ -106,6 +106,10 @@ Integration tests are gated on a sandbox token in `tests/.env`:
 SHIPLOGIC_SANDBOX_TOKEN=your-sandbox-token ./vendor/bin/phpunit --testsuite Integration
 ```
 
+## Credits
+
+Built and maintained by [Przemek Peron](mailto:przemek@sonnenglas.net).
+
 ## License
 
 MIT. See LICENSE.
