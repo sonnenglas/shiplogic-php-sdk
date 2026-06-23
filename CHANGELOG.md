@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 - 2026-06-24 — Security: require patched guzzle
+
+- Raised the runtime `guzzlehttp/guzzle` floor to `^7.12.1` so consumers pull
+  patched guzzle 7.12.x / psr7 2.12.x, closing the cookie-domain,
+  HTTPS-proxy-downgrade, and CRLF-injection advisories. No API changes.
+
 ## 1.0.1 - 2026-06-23
 
 - Package author metadata, README credits, and LICENSE copyright now list
